@@ -2,9 +2,7 @@
 
     $conn = mysqli_connect("localhost","root","","ajax_db");
 
-    if($conn){
-        echo('connected');
-    }
+    
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -14,7 +12,7 @@
     $sql = "INSERT INTO users (uname, pwd) VALUES ('".$username."','".$hashed_pwd."')";
 
     if(mysqli_query($conn,$sql)){
-        echo('done');
+        exit('user has been created');
     }else{
-        echo(mysqli_error($conn));
+        exit('user could not be created');
     }

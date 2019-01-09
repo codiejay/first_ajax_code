@@ -55,8 +55,11 @@
                 $.ajax({
                 method: "POST",
                 url: "insert.php",
+                success: function(res){
+                    alert(res);
+                },
                 data: { username: username.val(), password: password.val() },
-                }).done(alert('done'));
+                });
             }
 
         });
