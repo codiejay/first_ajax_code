@@ -1,7 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("localhost","root","","ajax_db");
-
+    include 'conn.php';
     
 
     $username = $_POST['username'];
